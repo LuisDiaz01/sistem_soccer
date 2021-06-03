@@ -8,7 +8,7 @@ from apps.core.models import Post
 # Create your views here.
 
 def Show(request,id_post):
-	mascota=Post.objects.get(id=id_post)
+	post=Post.objects.get(id=id_post)
 	context={'post':post}
 	return render(request,'post/show.html',context)
 

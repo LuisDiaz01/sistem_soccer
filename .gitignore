@@ -1,4 +1,5 @@
 venv/
+nota.txt
 *.sqlite3
 *.pyc
 *.log

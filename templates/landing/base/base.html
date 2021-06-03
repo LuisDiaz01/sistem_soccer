@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>{%block title %}Nombre del Equipo{% endblock%}</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- <link rel="manifest" href="site.webmanifest"> -->
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="icon" href="{% static 'ca/img/core-img/favicon.ico'%}">
+   <!-- CSS here -->
+  {% block css %}
+    {% include 'landing/lib/_style_css.html' %}
+  {% endblock %}
+  
+  {% block extra_css %}{% endblock %}
+   <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+   <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- Header Start -->
+    {% include 'landing/lib/_header.html'%}
+    <!-- Header End -->
+    <!-- ***** Wellcome Area Start ***** -->
+    <section class="wellcome_area clearfix" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-5 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Nombre del Club</h2>
+                        <h3>Nc</h3>
+                        <p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Eaque, cumque repellendus eveniet sint at doloribus sapiente doloremque nostrum, obcaecati fugiat corporis aliquid ipsum, hic tempore a, quis distinctio. Incidunt, harum?</p>
+                    </div>
+                </div>
+                <div class="col-7 col-md">
+                      <!-- # carousel -->
+                </div>
+            </div>
+        </div>
+        <!-- Welcome thumb -->
+        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s">
+            <!-- niñito en svg jugando futbol -->
+            <img src="{% static 'landing/img/background_1.jpg' %}" alt="">
+        </div>
+    </section>
+    <!-- ***** Wellcome Area End ***** -->
+
+    {%block content%} <!-- Contenido -->  {%endblock%}
+ 
+    <!-- footer start -->
+    {% include 'landing/lib/_footer.html'%}
+  <!--/ footer end  -->
+
+   <!-- JS here -->
+   
+   {% block js %}
+    {% include 'landing/lib/_style_js.html'%}
+   {% endblock %}
+
+   {% block extra_js %}
+   {% endblock %}
+</body>
+
+</html>
+

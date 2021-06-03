@@ -1,44 +1,82 @@
-{% extends "cruds/baseLogin.html" %}
-{% load staticfiles %}
+{% extends "base/base_login.html" %}
+{% load static %}
 
-{% block title %}SIGMA | Admin{% endblock %}
-{% block page_name %} <b>ADMINISTRADOR SIGMA</b> {% endblock %}
-{% block page_description %}Sistema Integral de Gesti&oacute;n y Manejo Administrativo{% endblock %}
-
+{%block title%}Login{%endblock%}
 {% block body %}
-<div class="container mt--9 pb-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-7">
-            <div class="card bg-secondary shadow border-3">
-                <div class="card-header bg-transparent pb-2">
-                    <div class="text-muted text-center">
-                        <h2>Iniciar secci&oacute;n</h2>
-                    </div>
-                </div>
-                <div class="card-body px-lg-5 py-lg-5">
-                    {% block login_form %}
-                    <form action="" method="post">
-                        {% csrf_token %}
-                        {% if message %}
-                        <p class="login-box-msg" style="color: red;">{{ message }}</p>
-                        {% endif %}
-                        <div class="form-group has-feedback">
-                            <input name="username" class="form-control" placeholder="Email">
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                        </div>
+    {% block logo %}
+    <div class="brand-logo" style="margin:auto 0px;align-items:center;align-content:center">
+        <img src="{% static 'style-login/images/logo.png'%}" style="width: 30%;margin:0 auto; position:relative;display:flex" alt="logo">
+    </div>
+    {% endblock %}
+    <!-- /.login-logo -->
+    {% if form.errors and not form.non_field_errors %}
+        <p class="alert alert-danger">
+            {% if form.errors.items|length == 1 %}"Please correct the error below."{% else %}
+                "Please correct the errors below."{% endif %}
+        </p>
+    {% endif %}
 
-                        <div class="form-group has-feedback">
-                            <input type="password" name="password" class="form-control" placeholder="Password">
-                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-default btn-flat">Ingresar</button>
-                        </div>
-                    </form>
-                    {% endblock login_form %}
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            <p class="alert alert-danger">
+                {{ error }}
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    {% block login_form %}
+        <form action="" method="post" class="pt-1">
+            {% csrf_token %}
+            {% if message %}
+                <p class="login-box-msg" style="color: red;">{{ message }}</p>
+            {% endif %}
+            <div class="form-group">
+              <label for="exampleInputEmail">Usuario</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-account-outline text-primary"></i>
+                  </span>
+                </div>
+                <input name="username" class="form-control form-control-md border-left-0" id="exampleInputEmail" placeholder="Usuario">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword">Contraseña</label>
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <span class="input-group-text bg-transparent border-right-0">
+                    <i class="mdi mdi-lock-outline text-primary"></i>
+                  </span>
+                </div>
+                <input name="password" type="password" class="form-control form-control-md border-left-0" id="exampleInputPassword" placeholder="Contraseña">                        
+              </div>
+            </div>
+            <div class="my-1 d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                    <label class="form-check-label text-muted"  style="font-size:.7rem">
+                        <input type="checkbox" class="form-check-input" >
+                        Keep me signed in 
+                    </label>
+                </div>
+                <div>
+                    <a href="#" class="auth-link text-black" style="font-size:.7rem;padding-left:5px" >¿Olvideste tu contraseña?</a>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="my-1">
+                <button class="btn btn-block btn-primary btn-md font-weight-medium auth-form-btn">LOGIN</button>
+            </div>
+            <div class="mb-1 d-flex">
+              <button type="button" class="btn btn-facebook auth-form-btn flex-grow mr-1">
+                <i class="mdi mdi-facebook mr-2"></i>Facebook
+              </button>
+              <button type="button" class="btn btn-google auth-form-btn flex-grow ml-1">
+                <i class="mdi mdi-google mr-2"></i>Google
+              </button>
+            </div>
+            <!-- <div class="text-center mt-4 font-weight-light">
+              Don't have an account? <a href="register-2.html" class="text-primary">Create</a>
+            </div> -->
+        </form>
+    {% endblock login_form %}
 {% endblock %}

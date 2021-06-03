@@ -1,5 +1,5 @@
 from django import forms
-from apps.core.models import Post
+from apps.core.models import Post, Persona, Equipo
 
 
 class PostForm(forms.ModelForm):
@@ -25,7 +25,53 @@ class PostForm(forms.ModelForm):
 			'imagen':forms.FileInput(),
 		}
 
-	# def __init__(self, arg):
-	# 	super(MascotaForm, self).__init__()
-	# 	self.arg = arg
+# class PersonaForm(forms.ModelForm):
+# 	"""docstring for PersonaForm"""
+# 	class Meta:
+# 		model=Persona
+# 		fields=[
+# 			'imagen',
+# 			'nombre',
+# 			'apellido',
+# 			'cedula',
+# 			'email',
+# 			'edad',
+# 			'peso',
+# 			'red',
+			
+# 		]
+# 		lebels={
+# 			'imagen':'Foto',
+# 			'nombre':'Nombre',
+# 			'apellido':'Apellido',
+# 			'cedula':'Cedula de Identidad',
+# 			'email':'E-mail',
+# 			'edad':'Edad',
+# 			'peso':'Peso',
+			
+# 		}
+# 		widgets={
+# 			'imagen':forms.FileInput(),
+# 			'nombre':forms.TextInput(),
+# 			'apellido':forms.TextInput(),
+# 			'cedula':forms.NumberInput(),
+# 			'email':forms.EmailInput(),
+# 			'edad':forms.NumberInput(),
+# 			'peso':forms.NumberInput(),
+			
+# 		}
 
+# class SteamForm(forms.ModelForm):
+# 	"""docstring for SteamForm"""
+# 	class Meta:
+# 		model=Steam
+# 		fields=[
+# 			'persona',
+# 			'club',
+# 			'divicion',	
+# 		]
+# 		lebels={
+# 			'persona':'Atleta',
+# 			'club':'Club',
+# 			'divicion':'Divición',
+# 		}

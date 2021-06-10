@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.core',
     'apps.landing',
+    'apps.encuentros',
     'adminlte3',
     'adminlte3_theme',
     # 'paypal.standard.ipn',

@@ -4,6 +4,9 @@ from pdb import set_trace
 # Create your views here.
 
 
+
+
+
 def index(request):
 	post=Post.objects.all().order_by('id')
 	club=Club.objects.all().order_by('id')

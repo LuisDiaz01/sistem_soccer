@@ -3,252 +3,436 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Verport" content="width=device-width, initial-scale=1.0">
 	<title>Inicio - Nombre del Club</title>
-
-	<link rel='stylesheet' href="{% static '/landing/css/bootstrap.css' %}">
-	<!-- <link rel="stylesheet" href="{% static '/landing/css/main2.css' %}"> -->
-	<link rel="stylesheet" href="{% static '/landing/css/style2.css' %}">
-
-
+    <link rel="stylesheet" href="{% static '/landing/startup/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/gijgo.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/slick.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/slicknav.css'%}">
+    <link rel="stylesheet" href="{% static '/landing/startup/css/style.css'%}">
 </head>
+
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-			<div class="container">
-				<a class="navbar-brand" href="#">Mouri</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <img src="{% static '/landing/startup/img/logo.png' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="main-menu  d-none d-lg-block text-center">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a class="active" href="index.html">Inicio</a></li>
+ 										<li><a href="#">paginas <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">random</a></li>
+                                                <li><a href="#">random</a></li>
+                                                <li><a href="#">random</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 d-none d-lg-block">
+                            <div class="log_chat_area d-flex align-items-end">
+                                <a href="#" data-scroll-nav="0" class="say_hi">Say Hello</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
 
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link text-white" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Portfolio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Services</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Contact</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+            <div class="container">
+                <div class="row align-items-center justify-content-start">
+                    <div class="col-lg-10 col-md-10">
+                        <div class="slider_text">
+                            <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                                Lorem ipsum dolor, sit amet, consectetur adipisicing elit. 
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
 
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="https://i.postimg.cc/bNQp0RDW/1.jpg" alt="First slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Slider One Item</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="https://i.postimg.cc/pVzg3LWn/2.jpg" alt="Second slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Slider One Item</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="https://i.postimg.cc/0y2F6Gpp/3.jpg" alt="Third slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Slider One Item</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-					</div>
-				</div>
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</header>
-	<main>
-	<section class="second-nav pt-3 pb-3 mt-0">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-3">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aspernatur sint maiores obcaecati quo magni a, possimus reiciendis officia quam ea accusantium tempore veritatis cum quas consequatur totam praesentium alias </p>
-				</div>
-				<hr class="d-inline-block" style="width:3px;height:10rem;background-color: var(--white);border-radius:10%">
-				<div class="col" style="height:10em;">
-					<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="height:10em;">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img src="..." class="d-block" style="width:100%;height:100%" alt="...">
-							</div>
-							<div class="carousel-item">
-								<img src="..." class="d-block" style="width:100%;height:100%" alt="...">
-							</div>
-							<div class="carousel-item">
-								<img src="..." class="d-block" style="width:100%;height:100%" alt="...">
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- service_area  -->
+    <!-- <div class="service_area mt-0 pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class=" text-center wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay=".4s">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                    </div>
+                </div>
+                <hr >
+                <div class="col-xl-9 col-md-8">
+                    <div class=" text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                    	<span>
+                        <div class="icon">
+                            <img src="{% static '/landing/startup/img/svg_icon/2.svg' %}" alt="">
+                        </div>
+                        <h3>Web design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
 
-	<section class='section-new pt-2 pb-2 mt-5 mb-5'>
-		<div class="container">
-			<div class="title">
-				<h2 class="center">
-					Noticias
-				</h2>
-				<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;height:.1rem;background-color: var(--purple);border-radius:10%">
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="card" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card" style="width: 18rem;">
-						<img src="..." class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-		
-	</main>
-	<!-- Footer -->
-	<footer class="page-footer font-small bg-dark">
-		<div style="background-color: #6351ce;">
-			<div class="container">
-				<!-- Grid row-->
-				<div class="row py-4 d-flex align-items-center">
-					<!-- Grid column -->
-					<div class="col-md-6 col-lg-5 text-center text-white text-md-left mb-4 mb-md-0">
-						<h6 class="mb-0">Get connected with us on social networks!</h6>
-					</div>
-					<!-- Grid column -->
-					<!-- Grid column -->
-					<div class="col-md-6 col-lg-7 text-center text-white text-md-right">
-						<!-- Facebook -->
-						<a class="fb-ic"> <i class="fab fa-facebook-f white-text mr-4"> </i> </a>
-						 <!-- Twitter -->
-						<a class="tw-ic"> <i class="fab fa-twitter white-text mr-4"> </i> </a>
-						<!-- Google +-->
-						<a class="gplus-ic"> <i class="fab fa-google-plus-g white-text mr-4"> </i> </a>
-						<!--Linkedin -->
-						<a class="li-ic"> <i class="fab fa-linkedin-in white-text mr-4"> </i> </a>
-						<!--Instagram-->
-						<a class="ins-ic"> <i class="fab fa-instagram white-text"> </i> </a>
-					</div>
-					<!-- Grid column -->
-				</div>
-				<!-- Grid row-->
-			</div>
-		</div>
-		<!-- Footer Links -->
-		<div class="container text-center text-white text-md-left mt-5">
-			<!-- Grid row -->
-			<div class="row mt-3">
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-					<!-- Content -->
-					<h6 class="text-uppercase font-weight-bold">Company name</h6>
-					<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color: var(--purple)">
-					<p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				</div>
-				<!-- Grid column -->
-				<!-- Grid column -->
-				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-					<h6 class="text-uppercase font-weight-bold">Products</h6>
-					<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color: var(--purple)">
-					<p> <a href="#!">MDBootstrap</a> </p>
-					<p> <a href="#!">MDWordPress</a> </p>
-					<p> <a href="#!">BrandFlow</a> </p>
-					<p> <a href="#!">Bootstrap Angular</a> </p>
-				</div>
-				<!-- Grid column -->
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-					<!-- Links -->
-					<h6 class="text-uppercase font-weight-bold">Useful links</h6>
-					<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color: var(--purple)">
-					<p> <a href="#!">Your Account</a> </p>
-					<p> <a href="#!">Become an Affiliate</a> </p>
-					<p> <a href="#!">Shipping Rates</a> </p>
-					<p> <a href="#!">Help</a> </p>
-				</div>
-				<!-- Grid column -->
-				<!-- Grid column -->
-				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-					<!-- Links -->
-					<h6 class="text-uppercase font-weight-bold">Contact</h6>
-					<hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;background-color: var(--purple)">
-					<p> <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-					<p> <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-					<p> <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-					<p> <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-				</div>
-				<!-- Grid column -->
-			</div>
-			<!-- Grid row -->
-		</div>
-		<!-- Footer Links -->
-		<!-- Copyright -->
-		<div class="footer-copyright text-center text-white py-3">© {% now 'Y' %} Copyright:
-			<a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-		</div>
-		<!-- Copyright -->
+                    	</span>
+                        vs
+                        <span>
+                        	
+                        <div class="icon">
+                            <img src="{% static '/landing/startup/img/svg_icon/2.svg' %}" alt="">
+                        </div>
+                        <h3>Web design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--/ service_area  -->
 
-	</footer>
-	<!-- Footer -->
+    
 
-	<script src='{% static "/landing/js/jquery-3.3.1.min.js" %}'></script>
-	<script src='{% static "/landing/js/bootstrap.min.js" %}'></script>
+    <!-- portfolio_image_area  -->
+    <div class="portfolio_image_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-90">
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Galeria
+                        	<hr style="background-color:rgb(129,75,204);width:2em;margin-top:0px;padding-top:0px">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                        <div class="portfolio_thumb">
+                            <img src="{% static '/landing/startup/img/slider_1.jpg' %}" alt="">
+                        </div>
+                        <div class="portfolio_hover">
+                            <div class="title">
+ 								<a class="boxed-btn3" href="#">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="portfolio_thumb">
+                            <img src="{% static '/landing/startup/img/slider_2.jpg' %}" alt="">
+                        </div>
+                        <div class="portfolio_hover">
+                            <div class="title">
+ 								<a class="boxed-btn3" href="#">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-lg-4">
+                    <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="portfolio_thumb">
+                            <img src="{% static '/landing/startup/img/slider_3.jpg' %}" alt="">
+                        </div>
+                        <div class="portfolio_hover">
+                            <div class="title">
+ 								<a class="boxed-btn3" href="#">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-lg-4">
+                    <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <div class="portfolio_thumb">
+                            <img src="{% static '/landing/startup/img/slider_4.jpg' %}" alt="">
+                        </div>
+                        <div class="portfolio_hover">
+                            <div class="title">
+ 								<a class="boxed-btn3" href="#">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-lg-4">
+                    <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                        <div class="portfolio_thumb">
+                            <img src="{% static '/landing/startup/img/slider_5.jpg' %}" alt="">
+                        </div>
+                        <div class="portfolio_hover">
+                            <div class="title">
+ 								<a class="boxed-btn3" href="#">Ver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+
+    <div class="about_area">
+    	<div class="container">
+    		<div class="row justify-content-end">
+    			<div class="col-lg-5 offset-lg-1">
+    				<div class="about_info">
+    					<div class="section_title white_text">
+    						<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+    							Club
+    						</h3>
+    						<h4 class="wow fadeInUp text-white" style="text-align:center" data-wow-duration="1s" data-wow-delay=".4s">Historia 
+    						<hr style="background-color:white;text-align:left;width:2rem">
+    						</h4>
+    						<p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt officiis quas repellendus reprehenderit accusantium.</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+
+
+    <!-- team_member_start -->
+    <div class="team_area ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-90">
+                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Directivos
+                        <hr style="background-color:rgb(129,75,204);width:2em;margin-top:0px;padding-top:0px">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="team_thumb">
+                            <img src="{% static '/landing/startup/img/team/1.png' %}" alt="">
+                            <div class="team_hover">
+                                <div class="hover_inner text-center">
+                                    <ul>
+                                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team_title text-center">
+                            <h3>Brandon Yeald</h3>
+                            <p>Entrenador</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                        <div class="team_thumb">
+                            <img src="{% static '/landing/startup/img/team/2.png' %}" alt="">
+                            <div class="team_hover">
+                                <div class="hover_inner text-center">
+                                    <ul>
+                                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team_title text-center">
+                            <h3>Calvin Anderson</h3>
+                            <p>Entrenador</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_team wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                        <div class="team_thumb">
+                            <img src="{% static '/landing/startup/img/team/3.png' %}" alt="">
+                            <div class="team_hover">
+                                <div class="hover_inner text-center">
+                                    <ul>
+                                        <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-linkedin"></i> </a></li>
+                                        <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team_title text-center">
+                            <h3>Roman Solo</h3>
+                            <p>Presidente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ team_member_end -->
+
+    <!-- testimonial_area  -->
+    <div class="testimonial_area ">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-xl-12">
+    				<div class="testmonial_active owl-carousel">
+    					<div class="single_carousel">
+    						<div class="single_testmonial text-center">
+    							<div class="quote">
+    								<img src="{% static '/landing/startup/img/testmonial/quote.svg' %}" alt="">
+    							</div>
+    							<p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
+    								sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
+    							Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+    							<div class="testmonial_author">
+    								<h3>Cristiano Ronaldo</h3>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row align-items-center">
+                	<div class="col-lg-4"></div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer_logo wow fadeInRight" style="text-align: center!important;margin-bottom:2rem" data-wow-duration="1s" data-wow-delay=".3s">
+                            <a href="index.html">
+                                <img src="{% static '/landing/startup/img/logo.png' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                	<div class="col-lg-4"></div>
+                </div>
+                <div class="row align-items-center" style="margin-bottom:2rem">
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow fadeInRight">
+                    	<h3 class="text-center text-white">Pagina</h3>
+                    	<hr style="background-color:white; width:2em;">
+                    	<ul class="text-white">
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    	</ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow fadeInRight">
+                    	<h3 class="text-center text-white">Club</h3>
+                    	<hr style="background-color:white; width:2em;">
+                    	<ul class="text-white">
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    	</ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 wow fadeInRight">
+                    	<h3 class="text-center text-white">Dirección</h3>
+                    	<hr style="background-color:white; width:2em;">
+                    	<ul class="text-white">
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    		<li>a</li>
+                    	</ul>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    
+                	<div class="col-lg-4"></div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="socail_links" style="text-align: center!important;">
+                            <ul>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" href="#"> <i class="fa fa-facebook"></i> </a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" href="#"> <i class="fa fa-twitter"></i> </a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" href="#"> <i class="fa fa-instagram"></i> </a></li>
+                                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" href="#"> <i class="fa fa-google-plus"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                	<div class="col-lg-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s">Copyright &copy;{% now 'Y' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/ footer end  -->
+
+    <!-- JS here -->
+    <script src="{% static '/landing/startup/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/popper.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/ajax-form.js' %}"></script>
+    <script src="{% static '/landing/startup/js/waypoints.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/scrollIt.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/wow.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/nice-select.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/plugins.js' %}"></script>
+    <script src="{% static '/landing/startup/js/gijgo.min.js' %}"></script>
+
+    <!--contact js-->
+    <script src="{% static '/landing/startup/js/contact.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.form.js' %}"></script>
+    <script src="{% static '/landing/startup/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/landing/startup/js/mail-script.js' %}"></script>
+
+    <script src="{% static '/landing/startup/js/main.js' %}"></script>
 </body>
+
 </html>

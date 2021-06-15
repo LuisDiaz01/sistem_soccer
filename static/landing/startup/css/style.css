@@ -1666,7 +1666,7 @@ background: linear-gradient(90deg, rgba(129,75,204,1) 0%, rgba(39,119,241,1) 100
 /* line 1, ../../Arafath/CL/December/233. Startup/HTML/scss/_about.scss */
 .about_area {
   background: #1F1F1F;
-  position: relative;
+  position: relative; 
 }
 
 /* line 4, ../../Arafath/CL/December/233. Startup/HTML/scss/_about.scss */
